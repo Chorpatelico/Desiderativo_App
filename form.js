@@ -180,7 +180,81 @@ document.addEventListener("DOMContentLoaded", () => {
       p.informacion || "-"
     ].join("\n");
 
-    let instrucciones = `INSTRUCCIONES PARA ANÁLISIS DEL CUESTIONARIO DESIDERATIVO\n\nUsa EXCLUSIVAMENTE las fuentes del Cuestionario/Test Desiderativo cargadas (Ocampo, Arzeno, Grassano, Celener, Maladesky, manuales y artículos afines).\n\nNO inventes teoría ni nomenclaturas nuevas. Si algo no se fundamenta en las fuentes, indícalo como hipótesis clínica y márcalo como tal.\n\nTrabaja siempre a partir del protocolo que te daré: símbolos, racionalizaciones, tiempos de reacción, implementaciones, conducta observada.\n\nTu tarea es realizar un análisis clínico del Cuestionario Desiderativo con el máximo nivel de profundidad y rigor posible.\n\nExplicita SIEMPRE:\n- Los datos del protocolo que tomas\n- El concepto teórico que aplicas (citando autor y fuente)\n- La inferencia clínica que extraes\n\nESTRUCTURA DEL INFORME:\n\n1. IMPLEMENTACIÓN Y ENCUADRE\n- Cómo se administró: forma estándar/guiada, aclaraciones, cambios, resistencias\n- Comprensión de consigna: "muerte como humano", función metafórica\n- Indicadores de fortaleza/debilidad yoica en implementación\n\n2. MECANISMOS INSTRUMENTALES\n- Primera disociación: capacidad de convertirse en símbolo\n- Segunda disociación: discriminación positivo/negativo\n- Identificación al símbolo: distancia vs ecuación simbólica\n- Racionalización: coherencia, idealización/peyorización, clichés\n\n3. ANSIEDAD (análisis integral según Ocampo y otros autores)\n- Catexia por catexia: tipo e intensidad (persecutoria/depresiva)\n- Tiempos de reacción y shocks: relación con defensas\n- Curva global: clasificación tipos 1-6 de Ocampo, evolución\n- Capacidad de reconocer, tolerar, transformar y simbolizar ansiedad\n\n4. REINOS Y FANTASÍAS DE MUERTE\n- Secuencia de reinos: orden y variaciones (Animal-Vegetal-Objeto)\n- Significado de elecciones: fortaleza/debilidad, esquema corporal\n- Fantasías de muerte: aniquilación vs permanencia/legado/reparación\n\n5. ANÁLISIS ESTRUCTURAL: ELLO - YO - SUPERYÓ\n- Ello: pulsiones predominantes, grado de ligadura simbólica\n- Yo: fortaleza, juicio de realidad, flexibilidad, función sintetizadora\n- Superyó/Ideal del Yo: exigencias, culpa, perfeccionismo\n\n6. POSICIÓN RESPECTO DEL OTRO\n- Tipo de vínculos: cuidado, sometimiento, dominio, dependencia\n- Lugar del sujeto: útil, víctima, perseguidor, protector\n- Articulación con ansiedad y Superyó\n\n7. DEFENSAS Y RECURSOS\n- Defensas predominantes: represión, negación, proyección, etc.\n- Eficacia: momentos de tramitación vs fracaso\n- Recursos yoicos: insight, humor, simbolización, reparación\n\n8. PERSPECTIVA ADL (Algoritmo David Liberman)\n8.1. Identificación de erotismos por catexias (oral primario/secundario, anal primario/secundario, fálico-uretral, fálico-genital)\n8.2. Registro del lenguaje: narrativo, descriptivo, argumentativo, modal\n8.3. Defensas según ADL y eficacia\n8.4. Trayectoria pulsional a lo largo del protocolo\n8.5. Articulación ADL con Yo, Superyó y posición frente al Otro\n8.6. Síntesis ADL: aporte al diagnóstico y pronóstico\n\n9. HIPÓTESIS DIAGNÓSTICA Y PRONÓSTICO\n- Hipótesis estructural fundamentada en los análisis realizados\n- Pronóstico: fortaleza yoica, flexibilidad defensiva, capacidad de simbolización\n\nAl finalizar, escribe: "FIN DEL INFORME"\n\n═══════════════════════════════════════════════════════════\n\nPROTOCOLO A ANALIZAR:\nNombre/ID: ${p.nombre}\n\n${protocolo}`;
+    // ANÁLISIS COMPLETO POR DEFECTO
+    let instrucciones = `INSTRUCCIONES PARA ANÁLISIS DEL CUESTIONARIO DESIDERATIVO
+
+Usa EXCLUSIVAMENTE las fuentes del Cuestionario/Test Desiderativo cargadas (Ocampo, Arzeno, Grassano, Celener, Maladesky, manuales y artículos afines).
+
+NO inventes teoría ni nomenclaturas nuevas. Si algo no se fundamenta en las fuentes, indícalo como hipótesis clínica y márcalo como tal.
+
+Trabaja siempre a partir del protocolo que te daré: símbolos, racionalizaciones, tiempos de reacción, implementaciones, conducta observada.
+
+Tu tarea es realizar un análisis clínico del Cuestionario Desiderativo con el máximo nivel de profundidad y rigor posible.
+
+Explicita SIEMPRE:
+- Los datos del protocolo que tomas
+- El concepto teórico que aplicas (citando autor y fuente)
+- La inferencia clínica que extraes
+
+ESTRUCTURA DEL INFORME:
+
+1. IMPLEMENTACIÓN Y ENCUADRE
+- Cómo se administró: forma estándar/guiada, aclaraciones, cambios, resistencias
+- Comprensión de consigna: "muerte como humano", función metafórica
+- Indicadores de fortaleza/debilidad yoica en implementación
+
+2. MECANISMOS INSTRUMENTALES
+- Primera disociación: capacidad de convertirse en símbolo
+- Segunda disociación: discriminación positivo/negativo
+- Identificación al símbolo: distancia vs ecuación simbólica
+- Racionalización: coherencia, idealización/peyorización, clichés
+
+3. ANSIEDAD (análisis integral según Ocampo y otros autores)
+- Catexia por catexia: tipo e intensidad (persecutoria/depresiva)
+- Tiempos de reacción y shocks: relación con defensas
+- Curva global: clasificación tipos 1-6 de Ocampo, evolución
+- Capacidad de reconocer, tolerar, transformar y simbolizar ansiedad
+
+4. REINOS Y FANTASÍAS DE MUERTE
+- Secuencia de reinos: orden y variaciones (Animal-Vegetal-Objeto)
+- Significado de elecciones: fortaleza/debilidad, esquema corporal
+- Fantasías de muerte: aniquilación vs permanencia/legado/reparación
+
+5. ANÁLISIS ESTRUCTURAL: ELLO - YO - SUPERYÓ
+- Ello: pulsiones predominantes, grado de ligadura simbólica
+- Yo: fortaleza, juicio de realidad, flexibilidad, función sintetizadora
+- Superyó/Ideal del Yo: exigencias, culpa, perfeccionismo
+
+6. POSICIÓN RESPECTO DEL OTRO
+- Tipo de vínculos: cuidado, sometimiento, dominio, dependencia
+- Lugar del sujeto: útil, víctima, perseguidor, protector
+- Articulación con ansiedad y Superyó
+
+7. DEFENSAS Y RECURSOS
+- Defensas predominantes: represión, negación, proyección, etc.
+- Eficacia: momentos de tramitación vs fracaso
+- Recursos yoicos: insight, humor, simbolización, reparación
+
+8. PERSPECTIVA ADL (Algoritmo David Liberman)
+8.1. Identificación de erotismos por catexias (oral primario/secundario, anal primario/secundario, fálico-uretral, fálico-genital)
+8.2. Registro del lenguaje: narrativo, descriptivo, argumentativo, modal
+8.3. Defensas según ADL y eficacia
+8.4. Trayectoria pulsional a lo largo del protocolo
+8.5. Articulación ADL con Yo, Superyó y posición frente al Otro
+8.6. Síntesis ADL: aporte al diagnóstico y pronóstico
+
+9. HIPÓTESIS DIAGNÓSTICA Y PRONÓSTICO
+- Hipótesis estructural fundamentada en los análisis realizados
+- Pronóstico: fortaleza yoica, flexibilidad defensiva, capacidad de simbolización
+
+Al finalizar, escribe: "FIN DEL INFORME"
+
+═══════════════════════════════════════════════════════════
+
+PROTOCOLO A ANALIZAR:
+Nombre/ID: ${p.nombre}
+
+${protocolo}`;
 
     return instrucciones;
   }
@@ -210,6 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function showResult(reportText) {
     resultText.value = reportText;
 
+    // Copiar el mismo texto al <pre> imprimible
     if (resultPrint) resultPrint.textContent = reportText;
 
     resultSection.style.display = "block";
@@ -252,37 +327,57 @@ document.addEventListener("DOMContentLoaded", () => {
       throw new Error("Falta ACCESS TOKEN.");
     }
 
+    // DEBUG: Log en consola
+    console.log("=== DEBUG GEMINI CALL ===");
+    console.log("WORKER_URL:", WORKER_URL);
+    console.log("TOKEN:", token.substring(0, 10) + "...");
+    console.log("BIBLIOGRAFIA_FILES count:", BIBLIOGRAFIA_FILES.length);
+    console.log("PROMPT length:", prompt.length);
+
+    const payload = {
+      model: "gemini-2.5-flash",
+      prompt,
+      fileIds: BIBLIOGRAFIA_FILES
+    };
+
+    console.log("PAYLOAD:", JSON.stringify(payload).substring(0, 200) + "...");
+
     const response = await fetch(WORKER_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "X-Access-Token": token
       },
-      body: JSON.stringify({
-        model: "gemini-2.5-flash",
-        prompt,
-        fileIds: BIBLIOGRAFIA_FILES
-      })
+      body: JSON.stringify(payload)
     });
+
+    console.log("RESPONSE STATUS:", response.status);
+    console.log("RESPONSE HEADERS:", response.headers);
+
+    // Leer el body una sola vez
+    const responseText = await response.text();
+    console.log("RESPONSE BODY:", responseText.substring(0, 300));
 
     if (response.status === 401) {
       localStorage.removeItem(ACCESS_TOKEN_STORAGE_KEY);
-      const errText = await response.text();
-      throw new Error(`No autorizado (token incorrecto). Detalle: ${errText}`);
+      throw new Error(`No autorizado (token incorrecto). Detalle: ${responseText}`);
     }
 
     if (!response.ok) {
-      const errText = await response.text();
-      throw new Error(`Error worker (${response.status}): ${errText}`);
+      throw new Error(`Error worker (${response.status}): ${responseText}`);
     }
 
-    const data = await response.json();
+    try {
+      const data = JSON.parse(responseText);
+      
+      if (!data.candidates || data.candidates.length === 0) {
+        throw new Error("No se recibió respuesta de Gemini");
+      }
 
-    if (!data.candidates || data.candidates.length === 0) {
-      throw new Error("No se recibió respuesta de Gemini");
+      return data.candidates[0].content.parts[0].text;
+    } catch (e) {
+      throw new Error(`Error parseando respuesta: ${e.message}`);
     }
-
-    return data.candidates[0].content.parts[0].text;
   }
 
   analizarBtn.addEventListener("click", async () => {
@@ -340,7 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           setBusy(false);
           setStatus("Error tras 3 intentos");
-          alert(`Error: ${error.message}\n\nSugerencias:\n1. Verifica tu conexión WiFi\n2. Recarga la página\n3. Si persiste, revisa el Worker y sus Secrets (GEMINI_API_KEY / ACCESS_TOKEN)`);
+          alert(`Error: ${error.message}\n\nSugerencias:\n1. Verifica tu ACCESS TOKEN en Cloudflare\n2. Verifica GEMINI_API_KEY en Cloudflare\n3. Verifica que los fileIds sean correctos\n4. Revisa la consola del navegador (F12)`);
         }
       }
     }
@@ -374,10 +469,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   guardarImprimirBtn.addEventListener("click", () => {
+    // Asegurar que el <pre> está sincronizado justo antes de imprimir
     if (resultPrint) resultPrint.textContent = resultText.value || "";
     window.print();
   });
 
+  // Si cambia el tamaño de pantalla (móvil / rotación), reajustar si es necesario
   window.addEventListener("resize", () => {
     if (resultPrint && resultText.value) {
       resultPrint.textContent = resultText.value;
